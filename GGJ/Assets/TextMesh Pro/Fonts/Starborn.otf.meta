@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 03135c87357760a4d9949dcf18bb9fe5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Starborn
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b28ab467bb4e89543ab07a0f43b4ad1f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

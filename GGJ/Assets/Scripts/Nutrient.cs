@@ -17,20 +17,21 @@ public class Nutrient : MonoBehaviour
         {
             healthBar.fillAmount = stamina / 100;
         }
+        stamina -= Time.deltaTime;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "nutrient") ;
+        if (collision.gameObject.tag == "Nutrient");
         {
             stamina = stamina + 10;
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Rock") ;
+        if (collision.gameObject.tag == "Rock");
         {
             stamina = 0;
         }
-        if (collision.gameObject.tag == "Dinosaur") ;
+        if (collision.gameObject.tag == "Dinosaur");
         {
             stamina = 5;
         }
