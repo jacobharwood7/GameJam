@@ -260,3 +260,9 @@ Received Import Request.
   path: ProjectSettings/TagManager.asset
   artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d16a2b79bdfa7dba26c0ee923b896ba') in 0.016652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2452.935965 seconds.
+  path: Assets/Scripts/Nutrient.cs
+  artifactKey: Guid(df1990452f9e38a48af4e701b031240d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Nutrient.cs using Guid(df1990452f9e38a48af4e701b031240d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca6188d5c5ff0a027e45f9b1c300ff0b') in 0.015993 seconds 
