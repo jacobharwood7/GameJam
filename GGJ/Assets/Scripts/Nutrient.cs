@@ -2,40 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Nutrient : MonoBehaviour
 {
     public GameObject player;
-    public float stamina;
 
+    public float stamina;
+    public float decayMultiplier = 1;
     public Image healthBar;
     public bool hasHealthBar;
 
+    [SerializeField] Text gameOverText;
+
     void Update()
     {
-        if (hasHealthBar)
+        if (healthBar.fillAmount <= 0 )
+        {
+            player.GetComponent<PlayerControls>().enabled = false;
+            if(player.active)
+            {
+                player.SetActive(false);
+                gameOverText.gameObject.SetActive(true);
+                Invoke("Credits", 4f);
+            }
+            
+        }
+        else if (hasHealthBar)
         {
             healthBar.fillAmount = stamina / 100;
         }
-        stamina -= Time.deltaTime;
+        stamina -= Time.deltaTime*decayMultiplier;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void Credits()
     {
-        if (collision.gameObject.tag == "Nutrient");
-        {
-            stamina = stamina + 10;
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.tag == "Rock");
-        {
-            stamina = 0;
-        }
-        if (collision.gameObject.tag == "Dinosaur");
-        {
-            stamina = 5;
-        }
+        SceneManager.LoadScene(2);
     }
-
 
 }

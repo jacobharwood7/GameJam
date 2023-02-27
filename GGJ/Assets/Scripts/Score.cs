@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Score : MonoBehaviour
@@ -29,5 +30,14 @@ public class Score : MonoBehaviour
         }
 
         playerScore.text = score.ToString();
+
+        if (score == 200)
+        {
+            Invoke("Credits", 4f);
+        }
+    }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }
